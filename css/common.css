@@ -1,0 +1,124 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Gothic&display=swap');
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Nanum Gothic', sans-serif; */
+
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 15px; color: #7e7e7e;
+    line-height: 2; font-weight: 600;
+}
+.row { margin: 0 auto; max-width: 1170px; padding: 0 10px;}
+
+
+
+/* =========== #header 구역 ==================================================== */
+#header {
+    position: fixed; width: 100%; 
+    color: #fff;
+    transition: all 0.5s; z-index: 999;
+}
+#header:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+#header.on {
+    background: #000; height: auto;
+}
+#header.on .topmenu {display: none;}
+#header .topmenu {
+    text-align: right; font-weight: 300;
+    font-size: 13px; padding: 5px 0; 
+    background: rgba(0, 0, 0, 0.5);
+}
+#header .topmenu a { padding-left: 10px; }
+
+#header .row {position: relative;}
+#header h1 {
+    font-size: 30px; font-size: bold;
+    padding: 10px 0;
+}
+#header .open { display: none; }
+#header #nav .depth1 {
+    position: absolute; right: 0; top: 0;
+}
+#header #nav .depth1 > li {
+    display: inline-block; 
+    padding: 33.5px 0 33.5px 20px;
+    font-size: 13px; line-height: 13px;
+    font-weight: 600;
+    position: relative;
+}
+#header #nav .depth1 > li.on {
+    color: #f87f77;
+}
+#header #nav .depth2 {
+    position: absolute; top: 100%; left: 0; 
+    display: none;
+}
+#header #nav .depth1 > li.on .depth2 {
+    display: block; 
+}
+#header #nav .depth2 a {
+    display: block; width: 190px;
+    background: rgba(0, 0, 0, 0.5); color: #fff;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    padding: 12px 20px;
+    transition: all 0.5s;
+}
+#header #nav .depth2 a:hover {
+    background: #f87f77;
+    color: #fff;
+}
+
+@keyframes nav {
+    from {height: 0%;}
+    to {height: 100%;}
+}
+
+
+
+
+
+/* ---- footer 구역 ------------------------------------------------ */
+
+#footer { background: #1b1b1b; padding: 35px 0;}
+#footer .copy {float: left;}
+#footer .sns { float: right; }
+#footer .sns a {
+    display: inline-block;
+    text-align: center; line-height: 35px;
+    font-size: 20px;
+    width: 35px; height: 35px;
+    margin-left: 15px;
+    border: 1px solid #7e7e7e;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+#footer .sns a:hover {
+    background: #7e7e7e; color: #fff;
+}
+
+
+#navbar {
+    position: fixed;
+    top: 50%; left: 100px;
+    width: 30px; height: 80px;
+    opacity: 0; transition: all 0.5s;
+}
+#navbar > span {
+    height: 8px; width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: block;
+    margin-top: 8px;
+    border-radius: 50px;
+}
+#navbar.on {
+    opacity: 1;
+}
+#navbar > span.on {
+    background-color: #f87f77;
+    width: 150%;
+}

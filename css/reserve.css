@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+#section { background: #ddd;  font-family: 'Nanum Gothic', sans-serif; padding-bottom: 100px;}
+
+.img { 
+    width: 100%; height: 600px; 
+    position: relative; 
+    background: url(../img/reserve.jpg) no-repeat center;
+    background-size: cover;
+}
+.img h1 { 
+    font-family: 'Montserrat', sans-serif;
+    position: absolute; top: 50%; left: 50%; color: #fff; font-size: 60px;
+    transform: translate(-50%, -50%); font-weight: bold;
+}
+.reserbox { padding: 60px 0; }
+.reserbox h2 { 
+    font-size: 24px; font-weight: 600; color: #161616; 
+    padding-bottom: 20px; font-family: 'Montserrat', sans-serif; 
+    text-align: center;
+}
+.reserbox .rcont { background: #fff; padding: 50px; overflow: hidden;}
+.reserbox .rcont h3 { font-weight: bold; color: #161616;}
+.reserbox .rcont h3 span { font-size: 22px; padding-left: 10px;}
+.reserbox .rcont > div { padding-bottom: 50px;}
+.reserbox .rcont .peo > p { 
+    display: inline-block; padding: 40px 100px;
+    font-size: 18px; vertical-align: middle;
+}
+.reserbox .rcont .peo > p i,
+.reserbox .rcont .peo > p span { 
+    font-size: 32px; color: #161616; 
+    vertical-align: middle; font-weight: bold;
+}
+.icon-arrows_minus { padding-left: 10px;}
+.reserbox .rcont .peo > p i { color: #f87f77;}
+
+
+/* datepicker */
+.ui-datepicker { 
+    width: 100%; font-family: 'Montserrat', sans-serif; padding: 30px;
+    border-radius: 0; margin-top: 40px;
+}
+.ui-datepicker-header {
+    font-size: 18px; background: none; border: none;
+    margin: 30px 0;
+}
+
+.ui-datepicker-calendar {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+
+.ui-datepicker-calendar thead th { padding: 20px 0; border-top: 2px solid #ddd;}
+.ui-datepicker-calendar tbody tr { border-top: 1px solid #ddd;}
+.ui-datepicker-calendar tbody tr:last-child { border-bottom: 1px solid #ddd;}
+.ui-datepicker-calendar tbody td { padding: 0;}
+.ui-datepicker-calendar tbody td+td { border-left: 1px solid #ddd;}
+/* table tdody td a */
+.ui-datepicker .ui-state-default { 
+    padding: 10px 10px 40px 40px;
+    border: none;
+    background: none;
+}
+.ui-datepicker .ui-state-active {
+    color: #f87f77; font-weight: bold;
+}
+
+.reserbox .date {float: left; width: 50%; font-size: 22px; color: #161616;}
+.reserbox .time { float: right; width: 50%; font-size: 22px; color: #161616;}
+.reserbox .date > p { display: inline-block; vertical-align: middle;}
+.reserbox select { 
+    padding: 5px 10px; border-radius: 0; border: 1px solid #ddd;
+    margin-left: 10px;
+}
+.reserbox .input { 
+    border: 1px solid #ddd; width: 200px; height: 30px;
+    font-size: 15px; font-weight: normal; padding: 0 10px; 
+
+}
+.reserbox button { 
+    padding: 10px 30px; font-size: 18px;
+    border: 1px solid #161616;
+    background: none;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.reserbox button:hover { background: #161616; color: #fff; }

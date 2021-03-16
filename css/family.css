@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+#section { background: #ddd; padding-bottom: 100px; font-family: 'Montserrat', sans-serif;}
+
+.img { 
+    width: 100%; height: 600px; 
+    position: relative; 
+    background: url(../img/family.jpg) no-repeat center;
+    background-size: cover;
+}
+.img h1 { 
+    position: absolute; top: 50%; left: 50%; color: #fff; font-size: 60px;
+    transform: translate(-50%, -50%); font-weight: bold;
+}
+.fambox { padding: 60px 0;  text-align: center; font-weight: 300; }
+.fambox h2 { 
+    font-size: 24px; font-weight: 600; color: #161616; 
+    padding-bottom: 20px; 
+    text-align: center;
+}
+.fambox form h2,
+.fambox p { font-family: 'Nanum Gothic', sans-serif; }
+.fambox .mailf {padding: 20px 0 60px; font-weight: bold;}
+.fambox form {
+    background: #fff; padding: 50px; 
+}
+.fambox input, 
+.fambox textarea { 
+    border: 1px solid #ddd; 
+    border-radius: none;
+    padding:10px; margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+} 
+.fambox input { width: 33%;}
+.fambox textarea { width: 99.7%; }
+.fambtn button{  
+    margin-top: 50px;
+    padding: 10px 30px; font-size: 18px;
+    border: 1px solid #161616;
+    background: none;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.fambtn button:hover { background: #161616; color: #fff; }

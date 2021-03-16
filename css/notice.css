@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+#section { background: #ddd; padding: 200px 0; font-family: 'Nanum Gothic', sans-serif; }
+
+caption {display: none;}
+.noticebox { background: #fff; padding: 100px 0; text-align: center;}
+.noticebox h2 { font-size: 24px; font-weight: 700; }
+.noticebox .search #searchlist,
+.noticebox .search input,
+.noticebox .search button { 
+    height: 40px; vertical-align: middle; padding: 0 30px;
+    border: 1px solid #ddd; margin: 20px 0 40px;
+    outline: none; font-weight: 700;
+    font-family: 'Nanum Gothic'; 
+    color: #7e7e7e;
+}
+.noticebox .search #searchlist option {font-family: 'Nanum Gothic', sans-serif; color: #7e7e7e; }
+.noticebox .search button { background: none; cursor: pointer;}
+
+/* table { border: 1px solid seagreen;} */
+
+.noticebox col:nth-child(1) { width:12%;}
+.noticebox col:nth-child(2) { width: auto;}
+.noticebox col:nth-child(3) { width: 12%;}
+.noticebox col:nth-child(4) { width: 15%;}
+.noticebox col:nth-child(5) { width: 12%;}
+.noticebox thead th {
+    font-weight: 700; padding: 10px 0;
+    background: #161616; color: #fff;
+}
+.noticebox tbody td {
+    font-weight: 300; color: #161616; padding: 10px 10px;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap; 
+    overflow: hidden; text-overflow: ellipsis;
+} 
+.number { padding: 40px 0;}
+.number a { 
+    display: inline-block; margin: 0 2px; 
+    border: 1px solid #ddd;
+    width: 30px; height: 30px;
+}
+.number a.act {
+    border: 1px solid #161616;
+    color: #161616;
+}
+
+@media screen and ( max-width: 1024px ) {
+    .noticebox col:nth-child(1) { width: 15%;}
+    .noticebox col:nth-child(2) { width: auto;}
+    .noticebox col:nth-child(3) { width: 15%;}
+    .noticebox col:nth-child(4) { width: 15%; display: none;}
+    .noticebox col:nth-child(5) { width: 12%; display: none;}
+    .noticebox thead th:nth-child(4),
+    .noticebox thead th:nth-child(5) {display: none;}
+    .noticebox tbody td:nth-child(4),
+    .noticebox tbody td:nth-child(5) {display: none;}
+}
+
+@media screen and ( max-width: 500px ) {
+    .noticebox col:nth-child(1) { width: 15%; display: none;}
+    .noticebox col:nth-child(2) { width: auto;}
+    .noticebox col:nth-child(3) { width: 15%; display: none;}
+    .noticebox col:nth-child(4) { width: 15%; display: none;}
+    .noticebox col:nth-child(5) { width: 12%; display: none;}
+    .noticebox thead th:nth-child(1),
+    .noticebox thead th:nth-child(3) {display: none;}
+    .noticebox tbody td:nth-child(1),
+    .noticebox tbody td:nth-child(3) {display: none;}
+}

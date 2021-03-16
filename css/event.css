@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+#section { 
+    background: #ddd;padding-bottom: 100px; line-height: normal;
+    font-weight: 300;
+}
+button {  font-family: 'Nanum Gothic', sans-serif; }
+
+.img { 
+    width: 100%; height: 600px; 
+    position: relative; 
+    background: url(../img/event.jpg) no-repeat center;
+    background-size: cover;
+}
+.img h1 { 
+    
+    position: absolute; top: 50%; left: 50%; color: #fff; font-size: 60px;
+    transform: translate(-50%, -50%); font-weight: bold;
+}
+.eventBox .rve { padding: 60px 0; text-align: center;}
+.eventBox .rtxt h2 { font-size: 24px; font-weight: 600; color: #161616; padding-bottom: 20px;}
+.eventBox .button { padding: 40px 0 20px;}
+.eventBox .button button { 
+    padding: 10px 30px; border: 1px solid #161616;
+    border-radius: 15px; background: #fff;
+    font-size: 18px; font-weight: bold; transition: all 0.5s;
+}
+.eventBox .button button:hover { background: #161616; color: #fff;}
+.eventBox .formBox { display: none; }
+.eventBox .formBox form { 
+    width: 500px; margin: 0 auto;
+    font-family: 'Nanum Gothic', sans-serif;
+    
+}
+.eventBox .formBox form p { padding: 5px;}
+.eventBox .formBox form label { 
+    width: 100px; 
+    display: inline-block;
+    text-align: left; font-weight: bold; color: #161616;
+}
+.eventBox .formBox form label[for="review"] { vertical-align: top;}
+.eventBox .formBox form input { width: 300px; padding: 5px; }
+.eventBox .formBox form textarea { width: 300px; padding: 5px; }
+
+
+
+.eventBox ul { overflow: hidden;}
+.eventBox ul li { float: left; width: 32%; margin-right: 2%; margin-bottom: 2%; text-align: center;}
+.eventBox ul li:nth-child(3n) { margin-right: 0%; }
+.eventBox .txtbox { background: #fff; padding: 20px; font-size: 13px; }
+.eventBox .txtbox h3 { 
+    color: #161616; font-size: 20px; 
+    font-weight: 700; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.eventBox .txtbox p { padding-top: 7px;}
+.eventBox .txtbox p:nth-of-type(1) { color: #161616; font-weight: 500;}
+.eventBox .txtbox p:nth-of-type(3) { 
+    max-height: 55px; overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.eventBox .btn { width: 100%; background: #fff; padding: 0 0 20px;}
+
+.eventBox .formBox button,
+.eventBox .btn button { 
+    border: 1px solid #161616;
+    background: none; 
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.eventBox .formBox button:hover,
+.eventBox .btn button:hover { background: #161616; color: #fff;}
+.eventBox .formBox button { margin-top: 30px;}

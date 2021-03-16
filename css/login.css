@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+#section { background: #ddd; padding: 200px 0; font-family: 'Nanum Gothic', sans-serif; }
+
+.loginbox h2 { font-size: 24px; font-weight: 700; text-align: center;}
+.loginbox .info { font-weight: 300; padding-bottom: 15px; text-align: center; line-height: 1.2;}
+.loginbox form { background: #fff; padding: 100px;}
+.loginbox legend {display: none;}
+.loginbox .outer div { text-align: center; padding: 30px 0;}
+.loginbox .outer .idpw input {
+    width: 400px; height: 60px; 
+    font-size: 16px; text-indent: 1em;
+    margin-top: 5px; 
+    border: 1px solid #ddd; 
+    outline: none;
+}
+.loginbox .outer .btn button {
+    margin: 0px auto;
+    width: 195px; height: 60px; 
+    font-size: 16px; border-radius: 30px;
+    border: none; font-size: 20px; font-weight: 700;
+    color: #fff; background: #ddd;
+    cursor: pointer; outline: none;
+}
+.loginbox .outer .btn button[type="submit"] {
+    background: #000;
+}    

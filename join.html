@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>210215</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="css/linea_icon.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/join.css">
+    <link rel="stylesheet" href="css/rwdindex.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header id="header">
+            <div class="topmenu">
+                <div class="row">
+                    <a href="index.html"><i class="icon-home"></i> HOME</a>
+                    <a href="login.html"><i class="icon-lock"></i> 로그인</a>
+                    <a href="join.html"><i class="icon-basic_signs"></i> 회원가입</a>
+                    <a href="notice.html"><i class="icon-chat"></i> 게시판</a>
+                </div>
+            </div>
+            <div class="row">
+                <h1><a href="index.html">BISTRO</a></h1>
+                <div class="open">
+                    <span class="blind">메뉴열기</span>
+                    <span></span> 
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav id="nav">
+                    <ul class="depth1">
+                        <li><a href="index.html">HOME +</a></li>
+                        <li><a href="aboutus.html">ABOUT US +</a></li>
+                        <li><a href="reserve.html">RESERVATION +</a>
+                            <ul class="depth2">
+                                <li><a href="reserve.html">예약</a></li>
+                                <li><a href="menu.html">메뉴안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="location.html">LOCATION +</a></li>
+                        <li><a href="event.html">EVENT +</a></li>
+                        <li><a href="family.html">JOIN THE FAMILY +</a></li>
+                        <!-- 바토스 홈페이지 참고 -->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+       <section id="section" class="joinpage">
+            <div class="joinbox row">
+                <h2>회원가입</h2>
+                <form action="#none" method="post">
+                    <fieldset>
+                        <legend>기본정보</legend>
+                        <h3>기본정보</h3>
+                        <table>
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><label for="idbox">아이디</label></th>
+                                    <td><input type="text" name="idbox" id="idbox"></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="pwbox">비밀번호</label></th>
+                                    <td><input type="password" name="pwbox" id="pwbox"></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="irum">이름</label></th>
+                                    <td><input type="text" name="irum" id="irum"></td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="3"><label for="zip">주소</label></th>
+                                    <td>
+                                        <input type="text" name="zip" id="zip">
+                                        <button type="button" onclick="kim()">우편번호</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="text" name="add1" id="add1"> 도로명주소
+                                        <input type="text" name="add2" id="add2"> 지번주소
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="add3" id="add3"></td>
+                                </tr>
+                                <tr>
+                                    <th><label for="ph">휴대전화</label></th>
+                                    <td>
+                                        <select name="ph" id="ph">
+                                            <option value="">010</option>
+                                            <option value="">011</option>
+                                        </select> -
+                                        <input type="text" name="ph1" id="ph1"> -
+                                        <input type="text" name="ph2" id="ph2">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>SMS수신여부</th>
+                                    <td>
+                                        <p><input type="checkbox" name="sms" id="sms"><label for="sms">동의합니다.</label></p>
+                                        <p>쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="email">이메일</label></th>
+                                    <td>
+                                        <input type="text" name="email" id="email"> @
+                                        <input type="text" name="domain" id="domain">
+                                        <select name="email" id="domainlist">
+                                            <option value="noselect">-이메일선택-</option>
+                                            <option value="naver.com">네이버</option>
+                                            <option value="daum.net">다음</option>
+                                            <option value="self">직접입력</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>이메일수신여부</th>
+                                    <td>
+                                        <p><input type="checkbox" name="emailok" id="emailok"><label for="emailok">동의합니다.</label></p>
+                                        <p>쇼핑몰에서 제공하는 유익한 이벤트 소식을 E-mail로 받으실 수 있습니다.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>추가정보</legend>
+                        <h3>추가정보</h3>
+                        <table>
+                            <colgroup>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>성별</th>
+                                    <td>
+                                        <input type="radio" name="gender" id="female" value="w"><label for="female">여자</label>
+                                        <input type="radio" name="gender" id="male" value="m"><label for="male">남자</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="birth">생년월일</label></th>
+                                    <td><input type="text" name="birth" id="birth"></td>
+                                </tr>
+                                <tr>
+                                    <th>지역</th>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="서울">서울</option>
+                                            <option value="경기">경기</option>
+                                            <option value="강원">강원</option>
+                                            <option value="전라">전라</option>
+                                            <option value="충청">충청</option>
+                                            <option value="경상">경상</option>
+                                            <option value="제주">제주</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>관심분야</th>
+                                    <td>
+                                        <input type="checkbox" id="all"><label for="all">전체선택</label>
+                                        <input type="checkbox" name="co1" id="co1" value="ps"><label for="co1">포토샵</label>
+                                        <input type="checkbox" name="co2" id="co2" value="ai"><label for="co2">일러스트</label>
+                                        <input type="checkbox" name="co3" id="co3" value="css"><label for="co3">CSS</label>
+                                        <input type="checkbox" name="co4" id="co4" value="html"><label for="co4">HTML</label>
+                                        <input type="checkbox" name="co5" id="co5" value="javascript"><label for="co5">JavaScript</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="memo">메모</label></th>
+                                    <td><textarea name="memo" id="memo" maxlength="20" placeholder="메모를 20글자 이내로 작성해주세요."></textarea> 남은 글자 : <span class="remain">20</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>이용약관의 동의</legend>
+                        <h3>이용약관의 동의</h3>
+                        <div class="agree">
+                            <div class="guide">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quasi explicabo reiciendis alias ducimus aspernatur dolor expedita optio dolorum cupiditate, aut sequi totam nobis facere qui soluta rem est ex?
+                                Officia rerum molestiae eos laboriosam earum, veniam odit repellat! Dicta, ut. In, fugit corrupti consequuntur repudiandae eius sapiente maxime sed labore. Velit sequi fugiat placeat, repellendus quibusdam est unde sit.
+                                Quidem, sunt quae. Molestias modi earum architecto aspernatur voluptate quisquam culpa quo aliquam quos fugiat soluta labore mollitia, odio cum ab voluptates officiis sed itaque nisi quaerat tempora? Ipsum, velit?
+                                Quidem sint, aliquid qui voluptatibus a modi ex itaque corrupti minima rem, cum, cupiditate dignissimos? At nostrum repudiandae amet ea veritatis minus voluptate, iure nesciunt explicabo repellat ullam modi soluta.
+                                Sapiente ducimus tempore omnis commodi quasi totam excepturi ipsam. Aperiam similique doloribus iste id voluptatibus incidunt, consequuntur eos ducimus nostrum vel a dolores doloremque quasi maiores, ad fugit, harum repellat?
+                                Vitae explicabo amet dicta eveniet doloremque pariatur ab deserunt cum, est optio aut deleniti quos dolorum autem rem voluptatem hic itaque assumenda obcaecati voluptas repellat quam quaerat! Nulla, animi cum!
+                                Maxime, eligendi ea! Iure, at exercitationem. Magnam accusamus blanditiis, sequi impedit quos distinctio suscipit, quaerat earum a natus optio veritatis. Natus, quibusdam laudantium corrupti fugiat numquam dolore magnam tenetur odit.
+                                Accusamus, est autem sequi blanditiis alias praesentium rerum libero dolorem, mollitia soluta at porro dolor nemo eaque, aliquid temporibus. Voluptates eveniet repudiandae, magni sequi inventore soluta culpa est dicta? Laudantium.
+                                Accusantium quia harum atque voluptate incidunt, ea minus ullam commodi voluptatem dolorem cupiditate non laboriosam at optio labore consequatur, molestias iusto fugit earum! Consectetur excepturi dicta accusantium dolore magnam. Dicta!
+                                Repellat explicabo dolorum molestias similique fuga sequi cupiditate provident autem odio, voluptatem nihil necessitatibus praesentium non nulla voluptas modi iste sapiente nisi? Repellendus velit praesentium amet explicabo libero molestias quas.
+                            </div>
+                            <p><span>이용약관에 동의하십니까?</span><input type="checkbox" value="ok" id="guide" name="guide"><label for="guide">동의합니다.</label></p>
+                        </div>
+                        <h3>개인정보수집 및 이용동의</h3>
+                        <div class="agree">
+                            <div class="privacy">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quasi explicabo reiciendis alias ducimus aspernatur dolor expedita optio dolorum cupiditate, aut sequi totam nobis facere qui soluta rem est ex?
+                                Officia rerum molestiae eos laboriosam earum, veniam odit repellat! Dicta, ut. In, fugit corrupti consequuntur repudiandae eius sapiente maxime sed labore. Velit sequi fugiat placeat, repellendus quibusdam est unde sit.
+                                Quidem, sunt quae. Molestias modi earum architecto aspernatur voluptate quisquam culpa quo aliquam quos fugiat soluta labore mollitia, odio cum ab voluptates officiis sed itaque nisi quaerat tempora? Ipsum, velit?
+                                Quidem sint, aliquid qui voluptatibus a modi ex itaque corrupti minima rem, cum, cupiditate dignissimos? At nostrum repudiandae amet ea veritatis minus voluptate, iure nesciunt explicabo repellat ullam modi soluta.
+                                Sapiente ducimus tempore omnis commodi quasi totam excepturi ipsam. Aperiam similique doloribus iste id voluptatibus incidunt, consequuntur eos ducimus nostrum vel a dolores doloremque quasi maiores, ad fugit, harum repellat?
+                                Vitae explicabo amet dicta eveniet doloremque pariatur ab deserunt cum, est optio aut deleniti quos dolorum autem rem voluptatem hic itaque assumenda obcaecati voluptas repellat quam quaerat! Nulla, animi cum!
+                                Maxime, eligendi ea! Iure, at exercitationem. Magnam accusamus blanditiis, sequi impedit quos distinctio suscipit, quaerat earum a natus optio veritatis. Natus, quibusdam laudantium corrupti fugiat numquam dolore magnam tenetur odit.
+                                Accusamus, est autem sequi blanditiis alias praesentium rerum libero dolorem, mollitia soluta at porro dolor nemo eaque, aliquid temporibus. Voluptates eveniet repudiandae, magni sequi inventore soluta culpa est dicta? Laudantium.
+                                Accusantium quia harum atque voluptate incidunt, ea minus ullam commodi voluptatem dolorem cupiditate non laboriosam at optio labore consequatur, molestias iusto fugit earum! Consectetur excepturi dicta accusantium dolore magnam. Dicta!
+                                Repellat explicabo dolorum molestias similique fuga sequi cupiditate provident autem odio, voluptatem nihil necessitatibus praesentium non nulla voluptas modi iste sapiente nisi? Repellendus velit praesentium amet explicabo libero molestias quas.
+                            </div>
+                            <p><span>이용약관에 동의하십니까?</span><input type="checkbox" value="ok" id="privacy" name="privacy"><label for="privacy">동의합니다.</p>
+                        </div>
+                    </fieldset>
+                    <div class="btn">
+                        <button type="submit">전송</button>
+                        <button type="reset">취소</button>
+                    </div>
+                
+    
+                </form>
+            </div>
+       </section>
+        
+        <footer id="footer">
+            <div class="row cf">
+                <div class="copy">
+                    Copyright &copy; 2021 YEONJOO KIM | All Rights Reserved
+                </div>
+                <div class="sns">
+                    <a href="#none"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#none"><i class="fab fa-twitter"></i></a>
+                    <a href="#none"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#none"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+        </footer>
+        <div id="navbar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/join.js"></script>
+
+    
+    <script>
+        // 우편번호 찾기
+        function kim() {
+            new daum.Postcode({
+            oncomplete: function(data) {
+            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+            // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
+            // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+            var roadAddr = data.roadAddress; // 도로명 주소 변수
+            var extraRoadAddr = ''; // 참고 항목 변수
+
+            // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+            // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+            if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                extraRoadAddr += data.bname;
+            }
+            // 건물명이 있고, 공동주택일 경우 추가한다.
+            if(data.buildingName !== '' && data.apartment === 'Y'){
+               extraRoadAddr += (extraRoadAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+            }
+            // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+            if(extraRoadAddr !== ''){
+                extraRoadAddr = ' (' + extraRoadAddr + ')';
+            }
+
+            // 우편번호와 주소 정보를 해당 필드에 넣는다.
+            document.getElementById('zip').value = data.zonecode;
+            document.getElementById("add1").value = roadAddr;
+            document.getElementById("add2").value = data.jibunAddress;
+            
+            // 참고항목 문자열이 있을 경우 해당 필드에 넣는다.
+            if(roadAddr !== ''){
+                document.getElementById("add3").value = extraRoadAddr;
+            } else {
+                document.getElementById("add3").value = '';
+            }
+        }
+    }).open();
+        }
+    </script>
+</body>
+</html>

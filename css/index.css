@@ -1,0 +1,419 @@
+@charset "utf-8";
+
+
+
+/* =========== #section 구역 ==================================================== */
+
+/* ---- .article1구역 ------------------------------------------------ */
+.article1 {position: relative;}
+.article1 .slide-group .sdvideo {
+    min-width: 100%; 
+    min-height: 100%;
+    position: relative; left: 50%; transform: translate(-50%);
+}
+/* .article1 .slide-group .slide1 {
+    background: url(../img/22.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+} */
+.article1 .slide-group .slide .txt1 {
+    position: absolute; top: 30%; left: 50%;
+    transform: translateX( -50%);
+    text-align: center; color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.5em;
+    text-shadow: 0 0 2px #aaa;
+    line-height: 1;
+}
+.article1 .slide-group .slide .txt1 h2 {
+    font-size: 90px;
+    font-weight: 800;
+    color: #f87f77;
+}
+.article1 .slide-group .slide .txt1 P {
+    font-size: 20px;
+}
+.article1 .slide-group .slick-dots {
+    position: absolute;
+    left: 50%; bottom: 12%;
+    transform: translateX(-50%);
+}
+.article1 .slide-group .slick-dots li {
+    display: inline-block; margin: 0 5px;
+    width: 120px; height: 15px; 
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+}
+.article1 .slide-group .slick-dots li button {
+    display: block; 
+    color: transparent;
+    border: none; 
+    width: 0%; height: 15px;
+}
+.article1 .slide-group .slick-dots li.slick-active button {
+    background: #f87f77; border-radius: 50px;
+    animation: probar 3s both;
+}
+@keyframes probar {
+    0% { width:0% }
+    100% { width:100% }
+}
+.article1 .plst {
+    position: absolute; left: 50%; bottom: 12%;
+    transform: translate(150px);
+    font-size: 20px;
+    color: #f87f77; background: none; border: none;
+}
+
+/* ---- .article2구역 ------------------------------------------------ */
+.article2, .article3, .article4,  
+.article7, .article8, .article9 {padding: 80px 0;}
+
+.article2 .txt2 {
+    float: left; width: 50%; padding: 0 40px;
+}
+.article2 img {
+    float: right; width: 43%; margin-right: 50px; margin-top: 50px;
+}
+
+.article2 .txt2 > h2 {
+    font-size: 30px; color: #000;
+    font-weight: 600; padding: 20px 0;
+    line-height: 1.3;
+}
+.article2 .txt2 > p {padding-bottom: 40px;}
+/* .article2 .txt2 > a { 
+    display: inline-block;
+    font-weight: 600; padding: 15px 30px;
+    background: #ddd; 
+    border-radius: 5px;
+    color: #333;
+    transition: all 0.5s;
+}
+.article2 .txt2 > a:hover {
+    background: #000; color: #fff;
+}
+.article2 .txt2 i {
+    font-size: 22px;
+}
+.article2 .txt2 .rsv {
+    opacity: 0; height: 0px;
+    transition: all 0.5s;
+}
+.article2 .txt2 .rsv.on {
+    opacity: 1; height: 300px;
+    padding: 40px 0;
+}
+.article2 .txt2 .rsv .in {
+    text-indent: 1em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: block;
+}
+.article2 .txt2 .rsv button {
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-top: 20px;
+    padding: 5px 15px;
+    border: none; border-radius: 5px;
+    font-family: 400;
+    background: #ddd;
+}
+.article2 .txt2 .rsv button:hover {
+    background: #f87f77; color: #fff;
+} */
+
+.article2 > .row {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); 
+}
+.article2.on > .row {
+    animation: fadeInUp 1s both; 
+}
+
+
+
+
+
+/* ---- .article3구역 ------------------------------------------------ */
+.article3 { background: #f5f5f5; position: relative;}
+/* .article3 .out { 
+    background: url(../img/3img33.jpg) no-repeat center;
+    background-size: cover; 
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0;
+}
+.article3 .out.on {
+    opacity: 1;
+    animation: fadeInLeft 1s both;
+} */
+
+.article3 ul {overflow: hidden; text-align: center; }
+.article3 ul > li { 
+    float: left; width: 26%; margin-left: 11%;
+    padding: 30px 0;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); 
+}
+.article3 ul > li:nth-child(1) { margin-left: 0%; }
+.article3 ul > li i { 
+    display: inline-block;
+    font-size: 30px; position: relative;
+    background: #fff; width: 80px; height: 80px;
+    border-radius: 50%;
+    line-height: 80px;
+}
+.article3 ul > li> h3 {
+    font-size: 18px; font-weight: 600;
+    padding: 40px 0 20px;
+    color: #000;
+}
+.article3 ul > li > p {
+    line-height: 1.5;
+}
+.article3.on ul > li:nth-child(1) {
+    animation: fadeInUp 0.5s both 0.3s; 
+}
+.article3.on ul > li:nth-child(2) {
+    animation: fadeInUp 0.5s both 0.6s; 
+}
+.article3.on ul > li:nth-child(3) {
+    animation: fadeInUp 0.5s both 0.9s; 
+}
+
+
+/* ---- .article4구역 ------------------------------------------------ */
+.article4 {position: relative; overflow: hidden;}
+.article4 > .out {float: left; width:50%; position: relative;}
+.article4 .txt3 { 
+    width: 65%; margin: 0 auto;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); 
+}
+.article4.on .txt3 {
+    animation: fadeInLeft 0.5s both;
+}
+.article4 .txt3 > p:nth-of-type(1) {
+    font-size: 16px; color: #d6b161;
+}
+.article4 .txt3 > h3 {
+    font-size: 18px; color: #333;
+    font-weight: 600;
+}
+.article4 .txt3 > p:nth-of-type(2) {
+    padding: 30px 0;
+} 
+.article4 .ifbox {
+    width:100%; padding-top:56.25%; 
+    position:relative; 
+}
+.article4 iframe {
+    position:absolute; top:0; left:0;
+}
+
+/* .article5 .cs_movie .tubewrap {
+    width:100%; padding-top:56.25%; 
+    position:relative; 
+}
+.article5 .cs_movie .tubewrap iframe {
+    position:absolute; top:0; left:0;
+} */
+
+
+/* ---- .article5구역 ------------------------------------------------ */
+.article5 {
+    background: url(../img/1201.jpg) no-repeat top; 
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 150px 0;
+}
+.article5 h2 {
+    color: #fff; font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); 
+}
+.article5.on h2 {
+    animation: fadeInUp 0.5s both;
+}
+.article5 .tbox {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); 
+}
+.article5 .tbox > div {
+    float: left; padding-top: 70px;
+}
+.article5 .tbox .txt3 { 
+    width: 40%; line-height: 1.5;
+}
+.article5.on .tbox {
+    animation: fadeInUp 0.5s both 0.8s;
+}
+.article5 .tbox .txt3:nth-of-type(1) { text-align: right;}
+.article5 .tbox h3 {
+    font-size: 18px; color: #f87f77;
+    font-weight: 600;
+}
+.article5 .tbox p {
+    font-size: 26px; color: #fff;
+    font-weight: 300;
+}
+.article5 .tbox .icon2 {
+    font-size: 70px; width: 20%; 
+    text-align: center;
+    line-height: 1;
+}
+
+/* ---- .article6구역 ------------------------------------------------ */
+
+.article6 { padding: 100px 0;} 
+.article6 h2 {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+}
+.article6 .menu {
+    text-align: center;
+    padding: 50px 0;
+}
+.article6 .menu a { 
+    display: inline-block;
+    padding: 0 15px;
+    color: #a9a9a9;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+.article6 .menu a.on {
+    color: #333;
+}
+.article6 .depth3 > li {
+    float: left; width: 33.333%;
+    padding: 10px;   
+}
+.article6 .depth3 > li.active{
+    animation: fadeInRight 1s both;
+}
+.article6 .depth3 > li .imgbox {position: relative;}
+.article6 .depth3 > li .imgbox::before {
+    content: '';
+    width: 100%; height: 100%; 
+    background: rgba(255, 255, 255, 0.9);
+    border: 20px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0; left: 0;
+    box-sizing: border-box;
+    opacity: 0; transition: all 0.5s;
+}
+.article6 .depth3 > li.on .imgbox::before {
+    opacity: 1;
+}
+.article6 .depth3 > li .imgbox i {
+    position: absolute; top: 60%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px; color: #333;
+    opacity: 0; transition: all 0.5s;
+}
+.article6 .depth3 > li.on .imgbox i {
+    top: 50%; opacity: 1; 
+}
+.article6 .depth3 > li .txt4 {
+    padding: 15px 0;
+    line-height: 1.5;
+}
+.article6 .depth3 > li .txt4 h3 {
+    font-size: 18px;
+    color: #222;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+.article6 .depth3 > li .txt4 p:nth-of-type(2) {
+    color: #d6b161;
+    font-weight: 800;
+    padding-top: 15px;
+    font-size: 16px;
+}
+
+
+
+
+/* ---- .article7구역 ------------------------------------------------ */
+.article7 {
+    background: url(../img/1501.jpg) no-repeat top;
+    background-size: cover;
+    background-attachment: fixed;
+    color:#fff; line-height: 1.5;
+    text-align: center;
+
+}
+.article7 .slide_group2 .slide {position: relative;}
+.article7 .slide_group2 .slide img {
+    /* position: absolute; left: 50%; transform: translate(-50%); */
+    border-radius: 50%; 
+    margin: 0 auto;
+}
+.article7 .slide_group2 .slide p:nth-of-type(1) {
+    font-size: 16px;
+    padding: 50px 0 10px;
+    font-style: italic;
+}
+.article7 .slide_group2 .slide h4 {
+    font-weight: 600;
+    font-size: 14px;
+}
+.article7 .slide_group2 .slide p:nth-of-type(2) {
+    font-size: 12px;
+}
+.article7 .slide_group2 .slick-dots {
+    padding-top: 30px; 
+}
+.article7 .slide_group2 .slick-dots li {
+    display: inline-block;
+    padding: 0 5px;
+}
+.article7 .slide_group2 .slick-dots li button {
+    background: #7e7e7e;
+    border: none; cursor: pointer;
+    color: transparent;  outline: none;
+    width: 30px; height: 5px; 
+    border-radius: 50px;
+}
+.article7 .slide_group2 .slick-dots li.slick-active button {
+    background: #fff;
+}
+
+
+
+
+/* ---- .article8구역 ------------------------------------------------ */
+.article8 { text-align: center;}
+.article8 h2 {
+    font-size: 24px;
+    color: #333;
+    padding-bottom: 30px;
+    font-weight: 700;
+}
+.article8 ul {padding: 120px 0;}
+.article8 ul li {
+    float: left;
+    width: 33%; padding:0 30px;
+}
+.article8 ul li i {
+    font-size: 36px;
+    color: #333;
+}
+.article8 ul li h4 {
+    font-size: 18px;
+    color: #333;
+    padding: 30px 0 20px;
+    font-weight: 600;
+}
+
+

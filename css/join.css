@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+#section { background: #ddd; padding: 200px 0; font-family: 'Nanum Gothic', sans-serif; }
+
+.joinbox h2 { font-size: 24px; font-weight: 700; padding-bottom: 15px; padding-left: 50px;}
+.joinbox form { background: #fff; padding: 50px;}
+.joinbox legend {display: none;}
+.joinbox h3 { font-size: 18px; padding: 30px 15px 10px;}
+
+
+.joinbox col:nth-child(1) { width: 20%; }
+.joinbox col:nth-child(2) { width: 80%; }
+.joinbox th { text-align: left; font-weight: 700; background: #f5f5f5; vertical-align: middle;}
+.joinbox th,
+.joinbox td { border: 1px solid #ddd; padding: 5px 10px; }
+.joinbox td { color: #000;}
+.joinbox select,
+.joinbox textarea,
+.joinbox input { padding: 5px; border: 1px solid #ddd;}
+.joinbox textarea { width: 500px; height: 120px;}
+.joinbox td label {margin: 0 10px 0 5px;}
+.joinbox button { 
+    background: #000; border: none;
+    border-radius: 15px; padding: 4px 10px;
+    vertical-align: middle; color: #fff;
+    font-weight: 700; cursor: pointer;
+}
+
+.joinbox .agree { background: #f5f5f5; padding: 30px 15px 20px;}
+.joinbox .guide,
+.joinbox .privacy {
+    background: #fff; padding: 20px; 
+    overflow-y: auto; height: 100px;
+    font-weight: 300;
+}
+.joinbox .agree p { padding-top: 10px; color: #000;}
+.joinbox .agree span { padding-right: 15px; }
+.btn {text-align: center; padding-top: 50px;}
+.btn button { 
+    padding: 10px 40px; 
+    background: #ddd; 
+    border: none; border-radius: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+} 
+.btn button[type="submit"] {
+    /* background: #f87f77; */
+    background: #000;
+    color: #fff;
+}
