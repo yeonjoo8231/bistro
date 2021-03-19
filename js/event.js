@@ -27,13 +27,10 @@ function dataPrint() {
         list += `<p>${reviewList[i].Review}</p></div><div class="btn"><button>삭제</button></div></li>`
     }
     $('.eventBox').append(`<ul class="list">${list}</ul>`)
-    var ruma = $('.list li').eq(0).find('.iruma').text()
-    var i = 0
-    var elli = document.querySelector('.list li')
-    for (i; i<elli.length; i++ ) {
-        elli.chideNodes['.iruma']
-    }
-    console.log(a)
+    var eliruma = document.querySelector('.eventBox .list .iruma').textContent
+    var eliru = eliruma.charAt(1)
+    console.log(eliru)
+    
 }
 
 //삭제 버튼 누르면 삭제
@@ -44,6 +41,8 @@ $('.eventBox').on('click', 'ul.list li button', function(e){
     $('ul.list').remove()
     dataPrint()
 })
+
+
 
 //데이터 직접 등록
 $('.eventBox').on('click', '.formBox button[type=submit]', function(e){
@@ -71,7 +70,8 @@ $('.eventBox button').on('click',function(){
 })
 
 
-
+// var elh2 = document.querySelector('.rtxt h2').textContent
+// console.log(elh2)
 
 //추가로 하고싶은거
 // 좋아요버튼 / 닫기 취소버튼 누르면 닫히는데 리뷰작성하기 정상적으로만들기
