@@ -4,7 +4,7 @@
 
 .loginbox h2 { font-size: 24px; font-weight: 700; text-align: center;}
 .loginbox .info { font-weight: 300; padding-bottom: 15px; text-align: center; line-height: 1.2;}
-.loginbox form { background: #fff; padding: 100px;}
+.loginbox form { background: #fff; padding: 100px 20px;}
 .loginbox legend {display: none;}
 .loginbox .outer div { text-align: center; padding: 30px 0;}
 .loginbox .outer .idpw input {
@@ -25,3 +25,13 @@
 .loginbox .outer .btn button[type="submit"] {
     background: #000;
 }    
+
+@media screen and (max-width:600px) {
+    .loginbox .outer .idpw input {
+        width: 100%;
+    }
+    .loginbox .outer .btn button {
+        display: block;
+        margin: 5px auto;
+    }
+}

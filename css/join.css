@@ -3,21 +3,21 @@
 #section { background: #ddd; padding: 200px 0; font-family: 'Nanum Gothic', sans-serif; }
 
 .joinbox h2 { font-size: 24px; font-weight: 700; padding-bottom: 15px; padding-left: 50px;}
-.joinbox form { background: #fff; padding: 50px;}
+.joinbox form { background: #fff; padding: 50px 20px;}
 .joinbox legend {display: none;}
 .joinbox h3 { font-size: 18px; padding: 30px 15px 10px;}
 
 
-.joinbox col:nth-child(1) { width: 20%; }
-.joinbox col:nth-child(2) { width: 80%; }
+.joinbox col:nth-child(1) { width: 30%; }
+.joinbox col:nth-child(2) { width: 70%; }
 .joinbox th { text-align: left; font-weight: 700; background: #f5f5f5; vertical-align: middle;}
 .joinbox th,
 .joinbox td { border: 1px solid #ddd; padding: 5px 10px; }
-.joinbox td { color: #000;}
+.joinbox td { color: #000; }
 .joinbox select,
 .joinbox textarea,
-.joinbox input { padding: 5px; border: 1px solid #ddd;}
-.joinbox textarea { width: 500px; height: 120px;}
+.joinbox input { padding: 5px; border: 1px solid #ddd; }
+.joinbox textarea { width: 100%; height: 120px;}
 .joinbox td label {margin: 0 10px 0 5px;}
 .joinbox button { 
     background: #000; border: none;
@@ -48,4 +48,37 @@
     /* background: #f87f77; */
     background: #000;
     color: #fff;
+}
+@media screen and ( max-width: 810px ) {
+    .joinbox tr:nth-child(5) td > span { display: block; padding-top: 10px; width: 100%;}
+    .joinbox tr:nth-child(5) td > span > span { width: 20%; display: inline-block;}
+    .joinbox tr:nth-child(5) td span input { width: 78%;}
+
+    .joinbox tr:nth-child(7) td {width: 100%;}
+    .joinbox tr:nth-child(7) td select { width: 15%;}
+    .joinbox tr:nth-child(7) td input { width: 38%;}
+}
+@media screen and ( max-width: 600px ) {
+
+    .joinbox td { width: 100%; }
+    .joinbox input { width: 100%; }
+    .joinbox input[type="checkbox"],
+    .joinbox input[type="radio"] { width: auto;}
+
+    .joinbox tr:nth-child(4) td input { width: 67%;}
+    .joinbox tr:nth-child(4) td button { width: 30%; display: inline-block;}
+
+    .joinbox tr:nth-child(5) td > span > span { width: 100%; display: inline-block;}
+    .joinbox tr:nth-child(5) td span input { width: 100%;}
+
+    .joinbox tr:nth-child(7) td input { width: 36%;}
+
+    .joinbox tr:nth-child(9) td input { width: 45%;}
+
+
+    fieldset:nth-child(2) select {width: 100%;}
+    fieldset:nth-child(2) tr:nth-child(4) td input { width: 10%;}
+    fieldset:nth-child(2) tr:nth-child(4) td label { width: 80%; display: inline-block;}
+
+    fieldset:nth-child(2) tr:nth-child(5) span {display: inline;}
 }

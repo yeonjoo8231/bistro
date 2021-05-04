@@ -10,19 +10,20 @@
 }
 .img h1 { 
     position: absolute; top: 50%; left: 50%; color: #fff; font-size: 60px;
-    transform: translate(-50%, -50%); font-weight: bold;
+    transform: translate(-50%, -50%); font-weight: bold; width: 100%; text-align: center;
+    line-height: 1;
 }
 h2 { 
     text-align: center;
     font-size: 24px; font-weight: 600; color: #161616; padding-bottom: 20px;
 }
-.abbox {padding: 100px; }
+.abbox {padding: 100px 20px; }
 .abbox > p { text-align: center; }
 .abbox .title { text-align: center; margin: 40px 0;}
 .abbox .title a { 
     font-family: 'Nanum Gothic', sans-serif;
     display: inline-block; 
-    padding: 10px 30px; 
+    padding: 0px 30px; 
     color: #a9a9a9; 
     font-weight: bold; transition: all 0.5s;
 }
@@ -31,13 +32,32 @@ h2 {
 }
 
 
-#container { min-height: 700px; background: #fff;}
-#container #content { height: 700px; overflow: hidden;}
-#container #content .aimg { float: left; width: 450px;}
+
+#container #content { width:100%; overflow: hidden;}
+#container #content .aimg1,
+#container #content .aimg2 { float: left; width:40%; height: 700px; }
+#container #content .aimg1 { background: url(../img/aboutus1.jpg) center no-repeat; background-size: cover;}
+#container #content .aimg2 { background: url(../img/aboutus2.jpg) center no-repeat; background-size: cover;}
 #container #content .atxtb { 
-    float: right; width: 520px; 
-    padding: 50px; font-weight: 300; line-height: 1.5;
-    text-align: center;
+    float: right; width: 60%; background: #fff;
+    padding: 50px 30px; font-weight: 300; line-height: 1.5;
+    text-align: center; height: 700px;
 }
-#container #content .atxtb h3 { font-size: 24px; font-weight: 600; color: #161616; }
+#container #content .atxtb h3 { font-size: 24px; font-weight: 600; color: #161616; padding-bottom: 40px;}
 #container #content .atxtb p { padding: 15px;}
+
+@media screen and (max-width:850px) {
+    #container #content .aimg1,
+    #container #content .aimg2 { float: none; width:100%; height: 600px;  }
+    #container #content .atxtb { 
+        float: none; width: 100%; height: 100%;
+    }
+    #container #content .atxtb h3 { padding-bottom: 20px;}
+}
+@media screen and (max-width:600px) {
+    .abbox {padding: 100px 0px; }
+    #container #content .aimg1,
+    #container #content .aimg2 { width:100%; height: 400px;  }
+
+    #container #content .atxtb h3 { padding-bottom: 20px;}
+}

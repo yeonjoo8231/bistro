@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+/* https://m.blog.naver.com/PostView.nhn?blogId=n_nflowers&logNo=221256447014&proxyReferer=https:%2F%2Fwww.google.com%2F */
 #section { 
     background: #ddd;padding-bottom: 100px; line-height: normal;
     font-weight: 300;
@@ -27,10 +27,9 @@ button {  font-family: 'Nanum Gothic', sans-serif; }
 }
 .eventBox .button button:hover { background: #161616; color: #fff;}
 .eventBox .formBox { display: none; }
+.eventBox .formBox > div { display: flex; justify-content: center; }
 .eventBox .formBox form { 
-    width: 500px; margin: 0 auto;
     font-family: 'Nanum Gothic', sans-serif;
-    
 }
 .eventBox .formBox form p { padding: 5px;}
 .eventBox .formBox form label { 
@@ -75,3 +74,26 @@ button {  font-family: 'Nanum Gothic', sans-serif; }
 .eventBox .formBox button:hover,
 .eventBox .btn button:hover { background: #161616; color: #fff;}
 .eventBox .formBox button { margin-top: 30px;}
+
+@media screen and (max-width:600px) {
+    .eventBox .formBox form label { 
+        width: 60px; 
+    }
+    /* .eventBox .formBox form input { width: 300px; padding: 5px; } */
+
+
+    .eventBox ul li { float: left; width: 49%; margin-right: 2%; margin-bottom: 2%; text-align: center;}
+    .eventBox ul li:nth-child(2n) { margin-right: 0%; }
+    .eventBox ul li:nth-child(3) { margin-right: 2%; }
+}
+@media screen and (max-width:400px) {
+    .eventBox .formBox form label { 
+        width: 50px; 
+    }
+    .eventBox .formBox form input { width: 200px;}
+    .eventBox .formBox form textarea { width: 200px;  }
+
+
+    .eventBox ul li { float: left; width: 100%; margin-right: 0%; margin-bottom: 2%; text-align: center;}
+    .eventBox ul li:nth-child(3) { margin-right: 0%; }
+}

@@ -19,21 +19,21 @@
     padding-bottom: 20px; font-family: 'Montserrat', sans-serif; 
     text-align: center;
 }
-.reserbox .rcont { background: #fff; padding: 50px; overflow: hidden;}
+.reserbox .rcont { background: #fff; padding: 50px 20px; overflow: hidden;}
 .reserbox .rcont h3 { font-weight: bold; color: #161616;}
 .reserbox .rcont h3 span { font-size: 22px; padding-left: 10px;}
 .reserbox .rcont > div { padding-bottom: 50px;}
-.reserbox .rcont .peo > p { 
-    display: inline-block; padding: 40px 100px;
-    font-size: 18px; vertical-align: middle;
+.reserbox .rcont .peo > div {
+    display: flex; justify-content: space-between;
+    padding: 40px;
 }
-.reserbox .rcont .peo > p i,
-.reserbox .rcont .peo > p span { 
+.reserbox .rcont .peo > div p i,
+.reserbox .rcont .peo > div p span:nth-of-type(2) { 
     font-size: 32px; color: #161616; 
     vertical-align: middle; font-weight: bold;
 }
 .icon-arrows_minus { padding-left: 10px;}
-.reserbox .rcont .peo > p i { color: #f87f77;}
+.reserbox .rcont .peo > div p i { color: #f87f77;}
 
 
 /* datepicker */
@@ -48,10 +48,8 @@
 
 .ui-datepicker-calendar {
     border-collapse:collapse;
-    border-spacing:0;
+    border-spacing:0; margin: 0;
 }
-
-
 .ui-datepicker-calendar thead th { padding: 20px 0; border-top: 2px solid #ddd;}
 .ui-datepicker-calendar tbody tr { border-top: 1px solid #ddd;}
 .ui-datepicker-calendar tbody tr:last-child { border-bottom: 1px solid #ddd;}
@@ -67,24 +65,53 @@
     color: #f87f77; font-weight: bold;
 }
 
-.reserbox .date {float: left; width: 50%; font-size: 22px; color: #161616;}
-.reserbox .time { float: right; width: 50%; font-size: 22px; color: #161616;}
-.reserbox .date > p { display: inline-block; vertical-align: middle;}
+.reserbox .datetime { display: flex; justify-content: space-between;}
+.reserbox .datetime > div { width: 50%; font-size: 22px; color: #161616; display: flex;}
+.reserbox .date > p:nth-child(1) { width: 25%; vertical-align: middle; }
+.reserbox .input { 
+    border: 1px solid #ddd; width: 70%; height: 44px;
+    font-size: 15px; font-weight: normal; padding: 0 10px; 
+}
+.reserbox .time label { width: 40%;}
 .reserbox select { 
     padding: 5px 10px; border-radius: 0; border: 1px solid #ddd;
-    margin-left: 10px;
+    margin-left: 10px; width: 58%;
 }
-.reserbox .input { 
-    border: 1px solid #ddd; width: 200px; height: 30px;
-    font-size: 15px; font-weight: normal; padding: 0 10px; 
 
-}
-.reserbox button { 
-    padding: 10px 30px; font-size: 18px;
-    border: 1px solid #161616;
-    background: none;
-    border-radius: 15px;
-    font-weight: bold;
-    transition: all 0.5s;
+
+.reserbtn {  display: flex; justify-content: center; width: 100%; }
+.reserbtn button { 
+    background: none; border: 1px solid #161616;
+    padding: 10px 30px; font-weight: bold;
+    border-radius: 15px; font-size: 18px;
+    transition: all 0.5s; 
 }
 .reserbox button:hover { background: #161616; color: #fff; }
+
+
+@media screen and (max-width: 800px) {
+    .reserbox .datetime { display: flex; flex-wrap: wrap;}
+    .reserbox .datetime > div { width: 100%; justify-content: space-between; margin-top: 10px; }
+    .reserbox .time label { width: 28%;}
+    .reserbox select {width: 70%;}
+}
+
+@media screen and (max-width:600px) {
+    .img h1 { font-size: 40px;}
+    .reserbox .rcont .peo > div {
+        display: flex;  flex-wrap: wrap;
+    }
+    .reserbox .rcont .peo > div p { width: 100%; text-align: center; display: flex; align-items: center;}
+    .reserbox .rcont .peo > div p span:nth-of-type(1) { width: 50%; }
+    .ui-datepicker { 
+        padding: 0px;
+    }
+    .ui-datepicker .ui-state-default { 
+        padding: 5px 5px 10px 10px;
+    }
+    .reserbox .datetime > div { flex-wrap: wrap;}
+    .reserbox .date > p:nth-child(1),
+    .reserbox .input,
+    .reserbox .time label,
+    .reserbox select { width: 100%; margin: 0; height: 44px;}
+}

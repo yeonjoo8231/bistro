@@ -25,19 +25,19 @@ $('#nav .depth1 > li').hover(
     function(){
         if ($('html').hasClass('pc')) {
             $(this).addClass('on')
-            $(this).find('.depth2').css({
-                opacity:0
-            }).animate({
-                opacity:1
-            },500)
+            // $(this).find('.depth2').css({
+            //     opacity:0
+            // }).animate({
+            //     opacity:1
+            // },500)
         }
     },
     function(){
         if ($('html').hasClass('pc')) {
             $(this).removeClass('on')
-            $(this).find('.depth2').animate({
-                opacity:0
-            },500)
+            // $(this).find('.depth2').animate({
+            //     opacity:0
+            // },500)
         }
     }
 )
@@ -46,15 +46,15 @@ $('#header .open').on('click',function(){
     $('#nav .depth1').slideToggle(500)
     $('#header').toggleClass('on')
 })
-$('#header #nav .depth1 > li').on('click',function(e){
+// $('#header #nav .depth1 > li').on('click',function(){
     
-    if ( $('html').hasClass('mobile') ) {
-        e.preventDefault()
-        // $(this).toggleClass('on').siblings().removeClass('on')
-        $(this).find('.depth2').stop().slideToggle(500).css({display:'block', opacity:1})
-        $(this).siblings().find('.depth2').stop().slideUp(500)
-    }
-})
+//     if ( $('html').hasClass('mobile') ) {
+//         // e.preventDefault()
+//         // $(this).toggleClass('on').siblings().removeClass('on')
+//         $(this).find('.depth2').stop().slideToggle(500).css({display:'block', opacity:1})
+//         $(this).siblings().find('.depth2').stop().slideUp(500)
+//     }
+// })
 
 
 

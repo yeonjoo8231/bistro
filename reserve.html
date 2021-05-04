@@ -41,16 +41,11 @@
                     <ul class="depth1">
                         <li><a href="index.html">HOME +</a></li>
                         <li><a href="aboutus.html">ABOUT US +</a></li>
-                        <li><a href="reserve.html">RESERVATION +</a>
-                            <ul class="depth2">
-                                <li><a href="reserve.html">예약</a></li>
-                                <li><a href="menu.html">메뉴안내</a></li>
-                            </ul>
-                        </li>
+                        <li class="lirev"><a href="reserve.html">RESERVATION +</a>
+                        <li class="lirev"><a href="menu.html">MENU +</a></li>
                         <li><a href="location.html">LOCATION +</a></li>
                         <li><a href="event.html">EVENT +</a></li>
                         <li><a href="family.html">JOIN THE FAMILY +</a></li>
-                        <!-- 바토스 홈페이지 참고 -->
                     </ul>
                 </nav>
             </div>
@@ -64,34 +59,40 @@
                 <div class="rcont">
                     <div class="peo">
                         <h3>step 1 <span>예약인원 선택</span></h3>
-                        <p>성인 <i class="icon-arrows_minus"></i> <span>0</span> <i class="icon-arrows_plus"></i></p>
-                        <p>어린이 <i class="icon-arrows_minus"></i> <span>0</span> <i class="icon-arrows_plus"></i></p>
-                        <p>유아 <i class="icon-arrows_minus"></i> <span>0</span> <i class="icon-arrows_plus"></i></p>
+                        <div>
+                            <p><span>성인</span> <i class="icon-arrows_minus"></i> <span>0</span> <i class="icon-arrows_plus"></i></p>
+                            <p><span>어린이</span> <i class="icon-arrows_minus"></i> <span>0</span> <i class="icon-arrows_plus"></i></p>
+                            <p><span>유아</spa> <i class="icon-arrows_minus"></i> <span>0</span> <i class="icon-arrows_plus"></i></p>
+                        </div>
                     </div>
+                    
                     <div class="cal">
                         <h3>step 2 <span>예약일시 선택</span></h3>
                         <div id="datepicker"></div>       
                     </div>
-                    <div class="date">
-                        <p>방문일자</p>
-                        <p class="input"></p>
+
+                    <div class="datetime">
+                        <div class="date">
+                            <p>방문일자</p>
+                            <p class="input"></p> 
+                        </div>
+                        <div class="time">
+                            <label for="">방문시간선택</label>
+                            <select name="" id="">
+                                <option value="">- 선택 -</option>
+                                <option value="">9:00</option>
+                                <option value="">10:00</option>
+                                <option value="">12:00</option>
+                                <option value="">13:00</option>
+                                <option value="">14:00</option>
+                                <option value="">18:00</option>
+                                <option value="">19:00</option>
+                                <option value="">20:00</option>
+                                <option value="">21:00</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="time">
-                        <label for="">방문시간선택</label>
-                        <select name="" id="">
-                            <option value="">- 선택 -</option>
-                            <option value="">9:00</option>
-                            <option value="">10:00</option>
-                            <option value="">12:00</option>
-                            <option value="">13:00</option>
-                            <option value="">14:00</option>
-                            <option value="">18:00</option>
-                            <option value="">19:00</option>
-                            <option value="">20:00</option>
-                            <option value="">21:00</option>
-                        </select>
-                    </div>
-                    <div class="resbtn"><button type="submit">예약</button></div>
+                    <div class="reserbtn"><button type="submit">예약</button></div>
                 </div>
             </div>
 
