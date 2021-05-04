@@ -107,7 +107,7 @@
         padding: 0px;
     }
     .ui-datepicker .ui-state-default { 
-        padding: 5px 5px 10px 10px;
+        padding: 3px 5px; font-size: 15px;
     }
     .reserbox .datetime > div { flex-wrap: wrap;}
     .reserbox .date > p:nth-child(1),
